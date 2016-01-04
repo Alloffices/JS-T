@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Javascript</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<style>
+		.wrapper {
+			margin:10px auto;
+			background:#eee;
+			max-width:500px;
+			height:30vh;
+			text-align:center;
+			padding:10px 0px 0px 0px;
+		}
+		.wrapper h1 {
+			text-transform:uppercase;
+		}
+		.wrapper p {
+			color:#666;
+		}
+		.wrapper ul {
+			list-style-type:none;
+			color:#blue;
+			padding:20px;
+			background:lightblue;
+			position:relative;
+			bottom:0;
+			margin:0;
+		}
+		.wrapper ul li {
+			font-size:16px;
+			text-transform:uppercase;
+			line-height: 40px;
+		}
+		.wrapper ul .done {
+			text-transform: lowercase;
+			color:#666;
+			letter-spacing:30px;
+		}
+		.wrapper .hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<p id="number-one"></p>
+	</div>
+
+	<div class="wrapper">
+		<!-- changes colors when you mouse over and out also whn clicked on -->
+		<SPAN onMouseOver="document.bgColor='blue'"; onMouseOut="document.bgColor='red'"; onClick="document.bgColor='purple'";>Blue and Red</SPAN><br />
+		<SPAN onClick="document.bgColor='brown'">Click for Brown BG!</SPAN>
+	</div>
+
+	<div class="wrapper">
+		<script LANGUAGE="Javascript">
+			document.write("There are "+history.length+" pages before this one <BR/>")
+			document.write("You are using "+navigator.appName+" at the moment<BR/>")
+			// If this is is not on a server then there is no location.host to go to
+			document.write("<A href='http://" +location.host+ "/index.html'>this is something</A><BR/>")
+			document.write("<A href='http://google.com'>Google.com</A><BR/>")
+		</script>
+		<A HREF="http://google.com" onMouseOver="document.bgColor='pink'; return true">Click Here!</A><BR/>
+		<button onclick="alert('this is a test')">click here</button>
+		<BODY onLoad="alert('thanks for comming to my page!')"><br />
+			<FORM>
+				<INPUT TYPE="button" VALUE="BACK" onCLick="history.go(-1)">
+				<INPUT TYPE="button" VALUE="FORWARD" onCLick="history.go(1)">
+			</FORM>
+	</div>
+	<div class="wrapper">
+		<button onMouseOver="document.bgColor='blue'; return true">Blue ish!</button>
+		<button onclick="myFunction()">The Current Year!</button>
+		<p id="date-year"></p>
+	</div>
+
+	<div class="wrapper">
+		<script LANGUAGE="Javascript">
+			document.write("<FONT SIZE='5PX' COLOR='RED'>This is red text</FONT><BR/>")
+			document.write("<FONT SIZE='10PX' COLOR='BLUE'>This is blue text</FONT>")
+		</script>
+	</div>
+
+	<div class="wrapper">
+		<h1>Practice</h1>
+		<p>
+			<input id="num-one"> - <input id="num-two">
+		</p>
+		<p id="minus-sum"></p>
+	</div>
+
+	<div class="wrapper">
+		<h1>Javascript Adding Things!</h1>
+		<p id="subhead">Add the following three numbers:</p>
+		<p>
+			<input id="num-one"> + <input id="num-two"> + <input id="num-three">
+		</p>
+		<p id="add-sum"></p>
+	</div>
+
+	<div class="wrapper">
+		<h4>Pictures</h4>
+		<ul>
+			<li><a data-img="simon-pic" id="simon" href="#">Simon Cowell</a></li>
+			<li><a data-img="bruce-pic" id="bruce" href="#">Bruce Willis</a></li>
+			<li><a data-img="ben-pic" id="ben" href="#">Ben Carson</a></li>
+		</ul>
+
+		<img class="hide" id="simon-pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/motherfuton/128.jpg">
+		<img class="hide" id="bruce-pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/leemunroe/128.jpg">
+		<img class="hide" id="ben-pic" src="https://s3.amazonaws.com/uifaces/faces/twitter/mghoz/128.jpg">
+	</div>
+
+
+	<script src="scripts/main.js"></script>
+</body>
+</html>
